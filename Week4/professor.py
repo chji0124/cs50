@@ -12,7 +12,7 @@ def main():
 
         for chance in range(3):
             print(f"{x}+{y} = ", end="")
-            equation = int(input())
+            equation = get_answer()
             if equation == answer:
                 score = score + 1
                 break
@@ -38,17 +38,20 @@ def get_level():
         except ValueError:
             pass
 
+def get_answer():
+    while True:
+        try:
+            return int(input())
+        except ValueError:
+            return -100
+
+
 # randomly generated non-negative integer with level digits or 
 # raises a ValueError if level is not 1, 2, or 3:
 def generate_integer(level):
-    if level == 1:
-        return random.randint(0, 10)
-    elif level == 2:
-        return random.randint(10, 100)
-    elif level == 3:
-        return random.randint(100, 1000)
-    else:
-        raise ValueError
+    upperBound = 10 ** level
+    lowerBound = int(upperBound / 10)
+    return random.randint(lowerBound, upperBound)
 
 if __name__ == "__main__":
     main() 
