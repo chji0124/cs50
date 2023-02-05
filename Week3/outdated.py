@@ -18,7 +18,7 @@ while True:
     #9/8/1636 
     try:
         month, day, year = date.split("/", 2)
-        if (1<= int(month) <= 31)and (1 <= int(month) <= 12):
+        if (1<= int(day) <= 31)and (1 <= int(month) <= 12):
             print(f"{year}-{int(month):02}-{int(day):02}")
         break
     

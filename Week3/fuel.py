@@ -14,7 +14,7 @@ def fuel_tank():
         try:
             numerator, denominator = fuel.split("/")
             f = int(numerator) / int(denominator)
-            if numerator <= denominator and denominator != 0:
+            if int(numerator) <= int(denominator) and int(denominator) != 0:
                 return int(f * 100)
         except (ValueError, ZeroDivisionError):
             pass
