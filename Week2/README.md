@@ -36,3 +36,5 @@ while i < 2:
     i += 1
 ```
 #### 2. For Loops
+###### - A `for` loop is a different type of loop.
+###### - 
